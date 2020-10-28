@@ -1,5 +1,3 @@
-# bpc-akr-web
-
 <h1>Webové rozhraní pro servery HTTP Apache</h1>
 
 <p>Část projektu pro demonstraci zranitelnosti webových serverů v rámci projektu do předmětu BPC-AKR.</p>
