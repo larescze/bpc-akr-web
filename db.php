@@ -3,7 +3,7 @@ $dbHost = "hosting.midgard.cz";
 $dbUsername = "wlazarov_vut";
 $dbPassword = "IV1Q1fJ7JP";
 
-// Create connection
+// Create connection (MySQLi Object-Oriented)
 $conn = new mysqli($dbHost, $dbUsername, $dbPassword);
 
 // Check connection
