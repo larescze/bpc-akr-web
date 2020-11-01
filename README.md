@@ -1,6 +1,6 @@
 <h1>BPC-AKR: Web security vulnerabilities</h1>
 
-<p>Web part of the project to demonstrate the vulnerabilities of Apache HTTP Server.</p>
+<p>Website for Apache HTTP Server vulnerabilities demonstration.</p>
 <p>Web interface where part of the selected attacks will be demonstrated. The structure of the interface responds to problematic elements such as untreated user input through the login form (SQL injenction) and the ability to insert your own content into the website (XSS).</p>
 
 <h2>Project structure</h2>
