@@ -1,0 +1,59 @@
+$white: #ffff;
+$vut: #e4002b;
+$vutDark: #cf0227;
+$fekt: #0060aa;
+$grey: #f1f1f1;
+
+$md: 768px;
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: $grey;
+
+    @media (max-width: $md) {
+        flex-direction: column-reverse;
+    }
+}
+
+.login-form {
+    padding: 1.5rem;
+    background-color: $fekt;
+    color: $white;
+}
+
+.login-header {
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn {
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: $vut;
+    border-color: $vut;
+
+    &:hover {
+        background-color: $vutDark;
+        border-color: $vutDark;
+    }
+}
+
+.content {
+    flex: 1;
+}
+
+.content-container {
+    margin: 2rem 3rem;
+    padding: 2rem;
+    background-color: $white;
+}
