@@ -5,9 +5,9 @@
 
 <h2>Project structure</h2>
 <ul>
-<li>css - stylesheets (Sass)</li>
-<li>db.php - establish database connection</li>
-<li>index.html - frontpage</li>
+<li>css - Stylesheets (Sass)</li>
+<li>db.php - Establish database connection</li>
+<li>index.html - Frontpage</li>
 </ul>
 
 <h2>Live production websites</h2>
