@@ -1,4 +1,6 @@
 <?php
+
+// Database login details
 $dbHost = "hosting.midgard.cz";
 $dbUsername = "wlazarov_vut";
 $dbPassword = "IV1Q1fJ7JP";
