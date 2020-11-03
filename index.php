@@ -91,7 +91,7 @@ include "functions/comment.php";
           <label for="comment">Message</label>
           <textarea class="form-control" id="message" name="message" rows="3"></textarea>
         </div>
-        <div class="text-danger">
+        <div class="text-danger error">
           <?= $commentFormError ?>
         </div>
         <div class="form-group">

@@ -91,9 +91,10 @@ h3 {
     background-color: $vut;
     border-color: $vut;
 
-    &:hover {
-        background-color: $vutDark;
-        border-color: $vutDark;
+    &:hover,
+    &:active {
+        background-color: $vutDark !important;
+        border-color: $vutDark !important;
     }
 }
 

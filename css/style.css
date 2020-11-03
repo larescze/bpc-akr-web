@@ -91,9 +91,9 @@ h3 {
   border-color: #e4002b;
 }
 
-.btn-primary:hover {
-  background-color: #cf0227;
-  border-color: #cf0227;
+.btn-primary:hover, .btn-primary:active {
+  background-color: #cf0227 !important;
+  border-color: #cf0227 !important;
 }
 
 .content {
