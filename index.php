@@ -1,9 +1,10 @@
 <?php
-ob_start();
+
 // Start session
 session_start();
-// Include login handler
+// Include backend
 include "functions/login.php";
+include "functions/comment.php";
 
 ?>
 <!DOCTYPE html>
@@ -66,7 +67,7 @@ include "functions/login.php";
             </div>
             <div class="date"><?= date('d.m.Y H:i:s', strtotime($row['date'])) ?></div>
             <p>
-              <?= $row['comment'] ?>
+              <?= $row['message'] ?>
             </p>
           </div>
         <?php
@@ -75,23 +76,26 @@ include "functions/login.php";
         ?>
       <?php endif; ?>
       <hr />
-      <form>
+      <form method="post">
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <label for="nickname">Nickame</label>
-            <input type="text" class="form-control" id="nickname" />
+            <input type="text" class="form-control" id="nickname" name="nickname" />
           </div>
           <div class="col-md-6 col-sm-12">
             <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" />
           </div>
         </div>
         <div class="form-group mt-2">
-          <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="3"></textarea>
+          <label for="comment">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+        </div>
+        <div class="text-danger">
+          <?= $commentFormError ?>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Send comment</button>
+          <button type="submit" name="comment" class="btn btn-primary">Send comment</button>
         </div>
       </form>
     </div>

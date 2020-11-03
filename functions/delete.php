@@ -1,7 +1,7 @@
 <?php
-ob_start();
+
 // Establish and handle MySQL database connection
-include 'connect.php';
+require_once('connect.php');
 
 $id = $_GET['id'];
 
