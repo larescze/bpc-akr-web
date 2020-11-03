@@ -6,7 +6,14 @@
 <h2>Project structure</h2>
 <ul>
 <li>css - Stylesheets (Sass)</li>
-<li>db.php - Establish database connection</li>
+<li>functions - Backend
+<ul>
+<li>comment.php - Comments handler</li>
+<li>connect.php - Establish database connection</li>
+<li>delete.php - Deleting comments</li>
+<li>login.php - Login handler</li>
+</ul>
+</li>
 <li>index.html - Frontpage</li>
 </ul>
 
