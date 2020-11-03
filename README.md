@@ -14,7 +14,7 @@
 <li>login.php - Login handler</li>
 </ul>
 </li>
-<li>index.html - Frontpage</li>
+<li>index.php - Frontpage</li>
 </ul>
 
 <h2>Live production websites</h2>
