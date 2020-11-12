@@ -49,19 +49,41 @@ h3 {
 }
 
 .logo {
-    font-size: 1.6em;
-    font-weight: 500;
+    display: flex;
+
+    a {
+        flex: 1;
+        font-size: 1.6em;
+        font-weight: 500;
+    }
 
     @include resetLink($white);
 
-    @media (max-width: $sm) {
-        font-size: 1.3em;
-    }
 }
 
 .header {
     padding: 1rem 3rem;
     background-color: $white;
+}
+
+.navbar-toggler {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .not-collapse-sm {
+        display: block !important;
+        height: auto !important;
+        visibility: visible;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url(/img/collapse.svg);
 }
 
 .login-form {

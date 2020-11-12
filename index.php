@@ -13,14 +13,18 @@ include "functions/comment.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website for demonstration Apache HTTP Server vulnerabilities.">
   <title>Apache</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
-  <div class="login-form">
+  <div class="login-form collapse not-collapse-sm" id="loginCollapse">
     <div class="logo"><a href="/"><i class="fas fa-shield-alt"></i> BPC-AKR</a></div>
+    <button class="btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#loginCollapse" aria-expanded="false" aria-controls="collapseExample">
+      Collapse Button
+    </button>
     <?php if ($_SESSION['loggedin']) : ?>
       <form method="post">
         <div class="login-header">Logged in: <?= $_SESSION['username'] ?></div>
@@ -30,7 +34,7 @@ include "functions/comment.php";
       </form>
     <?php else : ?>
       <div class="login-header">Login</div>
-      <form method="post">
+      <form action="" method="post">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" />
@@ -76,14 +80,14 @@ include "functions/comment.php";
         ?>
       <?php endif; ?>
       <hr />
-      <form method="post">
+      <form action="" method="post">
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <label for="nickname">Nickame</label>
             <input type="text" class="form-control" id="nickname" name="nickname" />
           </div>
           <div class="col-md-6 col-sm-12">
-            <label for="exampleFormControlInput1">Email address</label>
+            <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" />
           </div>
         </div>

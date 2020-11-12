@@ -42,6 +42,15 @@ h3 {
 }
 
 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 1.6em;
   font-weight: 500;
 }
@@ -52,15 +61,28 @@ h3 {
   text-decoration: none;
 }
 
-@media (max-width: 576px) {
-  .logo {
-    font-size: 1.3em;
-  }
-}
-
 .header {
   padding: 1rem 3rem;
   background-color: #ffff;
+}
+
+.navbar-toggler {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .not-collapse-sm {
+    display: block !important;
+    height: auto !important;
+    visibility: visible;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url(/img/collapse.svg);
 }
 
 .login-form {
