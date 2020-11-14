@@ -1,15 +1,10 @@
 <?php
 
 // Database login details
-$dbHost = "hosting.midgard.cz";
-$dbUsername = "wlazarov_vut";
-$dbPassword = "IV1Q1fJ7JP";
-$dbName = "wlazarov_bpc-akr";
+$db_host = "hosting.midgard.cz";
+$db_username = "wlazarov_vut";
+$db_password = "IV1Q1fJ7JP";
+$db_name = "wlazarov_bpc-akr";
 
 // Create connection (MySQLi Object-Oriented)
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name);

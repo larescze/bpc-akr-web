@@ -3,7 +3,7 @@
 // Start session
 session_start();
 // Include backend
-include "functions/login.php";
+include "functions/login-secured.php";
 include "functions/comment.php";
 
 ?>
@@ -20,37 +20,40 @@ include "functions/comment.php";
 </head>
 
 <body>
-  <div class="login-form collapse not-collapse-sm" id="loginCollapse">
-    <div class="logo"><a href="/"><i class="fas fa-shield-alt"></i> BPC-AKR</a></div>
-    <button class="btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#loginCollapse" aria-expanded="false" aria-controls="collapseExample">
-      Collapse Button
-    </button>
-    <?php if ($_SESSION['loggedin']) : ?>
-      <form method="post">
-        <div class="login-header">Logged in: <?= $_SESSION['username'] ?></div>
-        <button type="submit" name="logout" class="btn btn-primary">
-          Sign out
-        </button>
-      </form>
-    <?php else : ?>
-      <div class="login-header">Login</div>
-      <form action="" method="post">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="password" />
-        </div>
-        <div class="error">
-          <?= $formError ?>
-        </div>
-        <button type="submit" name="login" class="btn btn-primary">
-          Sign in
-        </button>
-      </form>
-    <?php endif; ?>
+  <div class="login-form">
+    <div class="logo"><a href="/"><i class="fas fa-shield-alt"></i> BPC-AKR</a>
+      <button class="navbar-toggler btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#loginCollapse" aria-expanded="false" aria-controls="loginCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse not-collapse-sm" id="loginCollapse">
+      <?php if ($_SESSION['loggedin']) : ?>
+        <form method="post">
+          <div class="login-header">Logged in: <?= $_SESSION['username'] ?></div>
+          <button type="submit" name="logout" class="btn btn-primary">
+            Sign out
+          </button>
+        </form>
+      <?php else : ?>
+        <div class="login-header">Login</div>
+        <form action="" method="post">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password" />
+          </div>
+          <div class="error">
+            <?= $form_error ?>
+          </div>
+          <button type="submit" name="login" class="btn btn-primary">
+            Sign in
+          </button>
+        </form>
+      <?php endif; ?>
+    </div>
   </div>
   <div class="content">
     <div class="header">
@@ -96,7 +99,7 @@ include "functions/comment.php";
           <textarea class="form-control" id="message" name="message" rows="3"></textarea>
         </div>
         <div class="text-danger error">
-          <?= $commentFormError ?>
+          <?= $comment_form_error ?>
         </div>
         <div class="form-group">
           <button type="submit" name="comment" class="btn btn-primary">Send comment</button>
