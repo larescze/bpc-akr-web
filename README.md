@@ -27,7 +27,7 @@
 <ul>
 <li>username - admin</li>
 <li>password - password</li>
-<ul>
+</ul>
 
 <h3>Apache version 2.4.43 (vulnerable)</h3>
 <p>Current version. Website is vulnerable to exploits: Cross-site scripting and SQL injection.</p>
