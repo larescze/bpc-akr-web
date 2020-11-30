@@ -6,9 +6,9 @@
 <h2>Project structure</h2>
 
 <ul>
-<li>secure - frontend and backend secure code</li>
-<li>vulnerable - vulnerabilites (XSS, SQLi, directory traversal)</li>
-<li>bpc-akr-db.sql</li>
+<li>secure/ - frontend and backend secure code</li>
+<li>vulnerable/ - vulnerabilites (XSS, SQLi, directory traversal)</li>
+<li>bpc-akr-db.sql - database import file</li>
 </ul>
 
 <h2>Live production websites</h2>
