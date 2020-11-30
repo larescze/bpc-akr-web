@@ -86,7 +86,9 @@ if (isset($_GET['file'])) {
             <div class="sep">
               <h3><?= $row['nickname'] ?></h3>
               <?php if ($_SESSION['loggedin']) : ?>
-                <a href="/functions/delete.php?id=<?= $row['id'] ?>"><i class="fas fa-times"></i></a>
+                <a href="/functions/delete.php?id=<?= $row['id'] ?>" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </a>
               <?php endif; ?>
             </div>
             <div class="date"><?= date('d.m.Y H:i:s', strtotime($row['date'])) ?></div>
