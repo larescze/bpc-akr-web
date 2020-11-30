@@ -6,16 +6,9 @@
 <h2>Project structure</h2>
 
 <ul>
-<li>css - Stylesheets (Sass)</li>
-<li>functions - Backend
-<ul>
-<li>comment.php - Comments handler</li>
-<li>connect.php - Establish database connection</li>
-<li>delete.php - Deleting comments</li>
-<li>login.php - Login handler</li>
-</ul>
-</li>
-<li>index.php - Frontpage</li>
+<li>secure - frontend and backend secure code</li>
+<li>vulnerable - vulnerabilites (XSS, SQLi, directory traversal)</li>
+<li>bpc-akr-db.sql</li>
 </ul>
 
 <h2>Live production websites</h2>
@@ -25,24 +18,24 @@
 <p>http://apache1.willilazarov.cz/</p>
 <h4>Login details</h4>
 <ul>
-<li>username - <strong>admin</strong></li>
-<li>password - <strong>password</strong></li>
+<li>Username - <strong>admin</strong></li>
+<li>Password - <strong>password</strong></li>
 </ul>
 
 <h3>Apache version 2.4.43 (vulnerable)</h3>
 <p>Current version. Website is vulnerable to exploits: Cross-site scripting and SQL injection.</p>
 <p>http://apache2.willilazarov.cz/</p>
 <ul>
-<li>username - <strong>admin</strong></li>
-<li>password - <strong>password</strong></li>
+<li>Username - <strong>admin</strong></li>
+<li>Password - <strong>password</strong></li>
 </ul>
 
 <h3>Apache version 2.4.43 (secure)</h3>
 <p>Current version. Website is protected against exploits: Cross-site scripting, SQL injection and directory traversal.</p>
 <p>https://apache3.willilazarov.cz/</p>
 <ul>
-<li>username - <strong>xguest20</strong></li>
-<li>password - <strong>Hz=7&fQ_&v;)n5Tu</strong></li>
+<li>Username - <strong>xguest20</strong></li>
+<li>Password - <strong>Hz=7&fQ_&v;)n5Tu</strong></li>
 </ul>
 
 <h2>Requirements</h2>
@@ -57,8 +50,8 @@
 <p>1. Clone repository in the disired directory:</p>
 <pre>git clone https://github.com/larescze/bpc-akr-web.git</pre>
 <p>2. Move files to root directory of webserver (web hosting, XAMPP, WampServer etc.).<p>
-<p>3. Create MySQL database with encoding utf8 and import SQL file bpc-akr.sql.</p>
-<p>4. Open PHP script connect.php and fill the database login details order to connect to the MySQL database server.</p>
+<p>3. Create MySQL database with encoding utf8 and import SQL file <strong>bpc-akr-db.sql</strong>.</p>
+<p>4. Open PHP script <strong>connect.php</strong> and fill the database login details order to connect to the MySQL database server.</p>
 <pre>
 // Path to file: functions/connect.php
 
@@ -68,4 +61,4 @@ $db_password = "";
 $db_name = "";
 
 </pre>
-<p>5. Start server and test vulnerabilites with: https://github.com/larescze/bpc-akr-python</p>
+<p>5. Start server and test vulnerabilites with this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
