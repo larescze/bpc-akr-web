@@ -25,24 +25,24 @@
 <p>http://apache1.willilazarov.cz/</p>
 <h4>Login details</h4>
 <ul>
-<li>username - admin</li>
-<li>password - password</li>
+<li>username - <strong>admin</strong></li>
+<li>password - <strong>password</strong></li>
 </ul>
 
 <h3>Apache version 2.4.43 (vulnerable)</h3>
 <p>Current version. Website is vulnerable to exploits: Cross-site scripting and SQL injection.</p>
 <p>http://apache2.willilazarov.cz/</p>
 <ul>
-<li>username - admin</li>
-<li>password - password</li>
+<li>username - <strong>admin</strong></li>
+<li>password - <strong>password</strong></li>
 </ul>
 
 <h3>Apache version 2.4.43 (secure)</h3>
 <p>Current version. Website is protected against exploits: Cross-site scripting, SQL injection and directory traversal.</p>
 <p>https://apache3.willilazarov.cz/</p>
 <ul>
-<li>username - xguest20</li>
-<li>password - bpc-akr-2020</li>
+<li>username - <strong>xguest20</strong></li>
+<li>password - <strong>Hz=7&fQ_&v;)n5Tu</strong></li>
 </ul>
 
 <h2>Requirements</h2>
