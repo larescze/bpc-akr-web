@@ -1,10 +1,10 @@
 <?php
 
 // Database login details
-$dbHost = "hosting.midgard.cz";
-$dbUsername = "wlazarov_vut";
-$dbPassword = "IV1Q1fJ7JP";
-$dbName = "wlazarov_bpc-akr";
+$dbHost = "";
+$dbUsername = "";
+$dbPassword = "";
+$dbName = "";
 
 // Create connection (MySQLi Object-Oriented)
 $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
