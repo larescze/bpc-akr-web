@@ -49,20 +49,23 @@
 <ul>
 <li>Local or live web server (Apache HTTP Server, Nginx Web Server, ...)</li>
 <li>PHP (recommended version 7.4.*)</li>
-<li>MariaDB (recommended version 10.5.*)
+<li>MariaDB (recommended version 10.5.*)</li>
 </ul>
 
 <h2>Installation</h2>
 <p>If you want to run websites of your own, follow steps below.</p>
 <p>1. Clone repository in the disired directory:</p>
 <pre>git clone https://github.com/larescze/bpc-akr-web.git</pre>
-<p>2. Move files to root directory of webserver (web hosting, XAMPP, WampServer etc.)<p>
-<p>3. Create MySQL database with encoding utf8 and import SQL file bpc-akr.sql</p>
-<p>4. Open PHP script in functions/connect.ph and fill the database login details order to connect to the MySQL database server.</p>
+<p>2. Move files to root directory of webserver (web hosting, XAMPP, WampServer etc.).<p>
+<p>3. Create MySQL database with encoding utf8 and import SQL file bpc-akr.sql.</p>
+<p>4. Open PHP script connect.php and fill the database login details order to connect to the MySQL database server.</p>
 <pre>
+// Path to file: functions/connect.php
+
 $db_host = "";
 $db_username = "";
 $db_password = "";
 $db_name = "";
+
 </pre>
-<p>5. Start server and test vulnerabilites with https://github.com/larescze/bpc-akr-python</p>
+<p>5. Start server and test vulnerabilites with: https://github.com/larescze/bpc-akr-python</p>
