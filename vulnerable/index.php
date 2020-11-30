@@ -5,18 +5,10 @@ session_start();
 // Include backend
 include "functions/login.php";
 include "functions/comment.php";
-
+// Path traversal
 if (isset($_GET['file'])) {
   $file = $_GET['file'];
   include($file);
-}
-
-$file = fopen("request.log", "a");
-foreach ($_SERVER as $key => $value) {
-  if (substr($key, 0, 5) <> 'HTTP_') {
-    continue;
-  }
-  fwrite($file, $value);
 }
 
 ?>
