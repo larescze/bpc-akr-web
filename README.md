@@ -35,7 +35,7 @@
 <ul>
 <li>username - admin</li>
 <li>password - password</li>
-<ul>
+</ul>
 
 <h3>Apache version 2.4.43 (secure)</h3>
 <p>Current version. Website is protected against exploits: Cross-site scripting, SQL injection and directory traversal.</p>
@@ -43,7 +43,7 @@
 <ul>
 <li>username - xguest20</li>
 <li>password - bpc-akr-2020</li>
-<ul>
+</ul>
 
 <h2>Requirements</h2>
 <ul>
