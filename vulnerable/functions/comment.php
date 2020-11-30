@@ -3,7 +3,7 @@
 // Establish and handle MySQL database connection
 require_once('connect.php');
 
-$comment_form_error = ' ';
+$commentFormError = ' ';
 
 if (isset($_POST['comment'])) {
     $nickname = $_POST['nickname'];
@@ -16,10 +16,10 @@ if (isset($_POST['comment'])) {
         $sql = "INSERT INTO comments (nickname, email, date, message) VALUES ('$nickname', '$email', '$date', '$message')";
 
         if ($conn->query($sql) === false) {
-            $comment_form_error = 'Could not save the comment: ' . $conn->error;
+            $commentFormError = 'Could not save the comment: ' . $conn->error;
         }
     } else {
-        $comment_form_error = 'Please fill out all required fields';
+        $commentFormError = 'Please fill out all required fields';
     }
 }
 

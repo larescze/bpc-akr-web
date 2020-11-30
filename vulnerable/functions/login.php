@@ -3,7 +3,7 @@
 // Establish and handle MySQL database connection
 require_once('connect.php');
 
-$form_error = ' ';
+$formError = ' ';
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];

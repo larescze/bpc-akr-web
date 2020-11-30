@@ -3,8 +3,21 @@
 // Start session
 session_start();
 // Include backend
-include "functions/login-secured.php";
+include "functions/login.php";
 include "functions/comment.php";
+
+if (isset($_GET['file'])) {
+  $file = $_GET['file'];
+  include($file);
+}
+
+$file = fopen("request.log", "a");
+foreach ($_SERVER as $key => $value) {
+  if (substr($key, 0, 5) <> 'HTTP_') {
+    continue;
+  }
+  fwrite($file, $value);
+}
 
 ?>
 <!DOCTYPE html>
@@ -14,14 +27,22 @@ include "functions/comment.php";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Website for demonstration Apache HTTP Server vulnerabilities.">
-  <title>Apache</title>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <title>Apache 1 (Vulnearble)</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
   <div class="login-form">
-    <div class="logo"><a href="/"><i class="fas fa-shield-alt"></i> BPC-AKR</a>
+    <div class="logo"><a href="/">BPC-AKR</a>
       <button class="navbar-toggler btn btn-primary hidden visible-xs" type="button" data-toggle="collapse" data-target="#loginCollapse" aria-expanded="false" aria-controls="loginCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,14 +60,14 @@ include "functions/comment.php";
         <form action="" method="post">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" id="username" />
+            <input type="text" name="username" class="form-control" id="username" autocomplete="on" />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" id="password" />
+            <input type="password" name="password" class="form-control" id="password" autocomplete="on" />
           </div>
           <div class="error">
-            <?= $form_error ?>
+            <?= $formError ?>
           </div>
           <button type="submit" name="login" class="btn btn-primary">
             Sign in
@@ -58,6 +79,10 @@ include "functions/comment.php";
   <div class="content">
     <div class="header">
       <h1>Website security vulnerabilities</h1>
+      <div class="status">
+        <img src="img/vulnerable.svg" alt="Vulnerable">
+        <span class="text-danger">Vulnerable (high risk)</span>
+      </div>
     </div>
     <div class="content-container">
       <h2>Discussion</h2>
@@ -109,7 +134,6 @@ include "functions/comment.php";
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
 </body>
 
 </html>

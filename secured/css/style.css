@@ -41,6 +41,10 @@ h3 {
   font-size: 1.1em;
 }
 
+.close {
+  opacity: 1 !important;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +63,19 @@ h3 {
 .logo a:hover {
   color: #ffff;
   text-decoration: none;
+}
+
+.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.status img {
+  width: 20px;
 }
 
 .header {

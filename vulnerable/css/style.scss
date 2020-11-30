@@ -1,0 +1,171 @@
+$white: #ffff;
+$vut: #e4002b;
+$vutDark: #cf0227;
+$fekt: #0060aa;
+$grey: #f1f1f1;
+
+$md: 768px;
+$sm: 576px;
+
+@mixin resetLink($color) {
+
+    a,
+    a:hover {
+        color: $color;
+        text-decoration: none;
+    }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: $grey;
+
+    @media (max-width: $md) {
+        flex-direction: column;
+    }
+}
+
+h1 {
+    font-size: 1.7em;
+
+    @media (max-width: $sm) {
+        font-size: 1.5em;
+    }
+}
+
+h2 {
+    font-size: 1.6em;
+
+    @media (max-width: $sm) {
+        font-size: 1.3em;
+    }
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+.close {
+    opacity: 1 !important;
+}
+
+.logo {
+    display: flex;
+
+    a {
+        flex: 1;
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+
+    @include resetLink($white);
+}
+
+.status {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 400;
+
+    img {
+        width: 20px;
+    }
+}
+
+.header {
+    padding: 1rem 3rem;
+    background-color: $white;
+}
+
+.navbar-toggler {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .not-collapse-sm {
+        display: block !important;
+        height: auto !important;
+        visibility: visible;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url(/img/collapse.svg);
+}
+
+.login-form {
+    min-width: 280px;
+    padding: 1rem 1.5rem;
+    background-color: $fekt;
+    color: $white;
+}
+
+.login-header {
+    margin: 1rem 0;
+    padding-top: 1rem;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn {
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: $vut;
+    border-color: $vut;
+
+    &:hover,
+    &:active {
+        background-color: $vutDark !important;
+        border-color: $vutDark !important;
+    }
+}
+
+.content {
+    flex: 1;
+}
+
+.content-container {
+    margin: 3rem;
+    padding: 2rem;
+    background-color: $white;
+
+    @media (max-width: $sm) {
+        margin: 1rem;
+    }
+
+    .comment {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid $grey;
+
+        .date {
+            font-size: .85em;
+        }
+    }
+
+}
+
+.error {
+    margin-bottom: 1rem;
+}
+
+.sep {
+    display: flex;
+    justify-content: space-between;
+
+    @include resetLink($vut);
+}
