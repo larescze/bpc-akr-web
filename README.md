@@ -24,7 +24,7 @@ bpc-akr-web
 
 <h3>Apache version 2.2.34 (vulnerable)</h3>
 <p>This is an old version of the Apache HTTP Server, it may be vulnerable more to attacks than v2.4. Website is vulnerable to exploits: Cross-site scripting, SQL injection and directory traversal.</p>
-<p><a href="http://apache1.willilazarov.cz/">Live demo</a></p>
+<p>:globe_with_meridians:<a href="http://apache1.willilazarov.cz/">Live demo</a></p>
 <h4>Login details</h4>
 <ul>
 <li>Username - <strong>admin</strong></li>
@@ -33,7 +33,7 @@ bpc-akr-web
 
 <h3>Apache version 2.4.43 (vulnerable)</h3>
 <p>Current version. Website is vulnerable to exploits: Cross-site scripting and SQL injection.</p>
-<p><a href="http://apache2.willilazarov.cz/">Live demo</a></p>
+<p>:globe_with_meridians:<a href="http://apache2.willilazarov.cz/">Live demo</a></p>
 <ul>
 <li>Username - <strong>admin</strong></li>
 <li>Password - <strong>password</strong></li>
@@ -41,7 +41,7 @@ bpc-akr-web
 
 <h3>Apache version 2.4.43 (secure)</h3>
 <p>Current version. Website is protected against exploits: Cross-site scripting, SQL injection and directory traversal.</p>
-<p><a href="https://apache3.willilazarov.cz/">Live demo</a> (SSL/TLS)</p>
+<p>:globe_with_meridians:<a href="https://apache3.willilazarov.cz/">Live demo</a> (SSL/TLS)</p>
 <ul>
 <li>Username - <strong>xguest20</strong></li>
 <li>Password - <strong>Hz=7&fQ_&v;)n5Tu</strong></li>
