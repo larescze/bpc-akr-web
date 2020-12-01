@@ -4,12 +4,21 @@
 <p>The structure of the interface responds to problematic elements such as untreated user input through the login form (SQL injenction) and the ability to insert content into the website (XSS).</p>
 
 <h2>Project structure</h2>
-
-<ul>
-<li>secure/ - frontend and backend secure code</li>
-<li>vulnerable/ - vulnerabilites (XSS, SQLi, directory traversal)</li>
-<li>bpc-akr-db.sql - database import file</li>
-</ul>
+<pre>
+bpc-akr-web
+├── secure                  # Secure website (Frontend and backend)
+│   ├── css                 # Cascading Style Sheets, Sass
+│   ├── functions           # Website backend
+│   ├── img                 # Images and favicon
+│   └── index.php           # Home page          
+├── vulnerable              # Vulnerable website (Frontend and backend)
+│   ├── css                 # Cascading Style Sheets, Sass
+│   ├── functions           # Website backend (vulnerable PHP code)
+│   ├── img                 # Images and favicon
+│   └── index.php           # Home page      
+├── README.md               # Readme file           
+└── bpc-akr-db.sql          # Database import file
+</pre>
 
 <h2>Live production websites</h2>
 
@@ -53,12 +62,18 @@
 <p>3. Create MySQL database with encoding utf8 and import SQL file <strong>bpc-akr-db.sql</strong>.</p>
 <p>4. Open PHP script <strong>connect.php</strong> and fill the database login details order to connect to the MySQL database server.</p>
 <pre>
-// Path to file: functions/connect.php
-
+.
+├── ...
+├── functions               # Website backend
+│   ├── connect.php         # Database connection file
+│   └── ...                 # Other files
+└── ...
+</pre>
+<pre>
+// Database login details
 $db_host = "";
 $db_username = "";
 $db_password = "";
 $db_name = "";
-
 </pre>
 <p>5. Start server and test vulnerabilites with this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
