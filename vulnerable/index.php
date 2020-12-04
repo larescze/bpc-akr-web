@@ -22,7 +22,7 @@ if (isset($_GET['file'])) {
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-  <title>Apache 1 (Vulnearble)</title>
+  <title>Apache (Vulnearble)</title>
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
