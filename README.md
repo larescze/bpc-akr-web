@@ -55,7 +55,7 @@ bpc-akr-web
 </ul>
 
 <h2>Installation</h2>
-<p>If you want to run websites of your own, follow steps below.</p>
+<p>If you want to run websites of your own, follow the steps below:</p>
 <p>1. Clone repository in the disired directory:</p>
 <pre>git clone https://github.com/larescze/bpc-akr-web.git</pre>
 <p>2. Move files to root directory of webserver (web hosting, XAMPP, WampServer etc.).<p>
