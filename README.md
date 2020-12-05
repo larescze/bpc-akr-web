@@ -47,7 +47,7 @@ bpc-akr-web
 <li>Password - <strong>Hz=7&fQ_&v;)n5Tu</strong></li>
 </ul>
 
-<h2>Requirements</h2>
+<h2>Dependencies</h2>
 <ul>
 <li>Local or live web server (Apache HTTP Server, Nginx Web Server, ...)</li>
 <li>PHP (recommended version 7.4.*)</li>
