@@ -91,7 +91,7 @@ if (isset($_GET['file'])) {
                 </a>
               <?php endif; ?>
             </div>
-            <div class="date"><?= date('d.m.Y H:i:s', strtotime($row['date'])) ?></div>
+            <div class="date"><?= date('d.m.Y H:i', strtotime($row['date'])) ?></div>
             <p>
               <?= $row['message'] ?>
             </p>
