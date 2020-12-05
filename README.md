@@ -2,7 +2,7 @@
 
 <p>Website for demonstration Apache HTTP Server vulnerabilities.</p>
 <p>The structure of the interface responds to problematic elements such as untreated user input through the login form (SQL injenction) and the ability to insert content into the website (XSS).</p>
-<p>Test vulnerabilities with web application Seclab from this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
+<p>Perform vulnerability testing using the web application Seclab from this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
 
 <h2>Project structure</h2>
 <pre>
@@ -77,4 +77,4 @@ $db_username = "";
 $db_password = "";
 $db_name = "";
 </pre>
-<p>5. Start server and test vulnerabilites with this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
+<p>5. Start server and perform vulnerability testing with the web application from this <a href="https://github.com/larescze/bpc-akr-python">repository</a>.</p>
