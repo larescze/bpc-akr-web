@@ -32,14 +32,6 @@ bpc-akr-web
 <li>Password - <strong>password</strong></li>
 </ul>
 
-<h3>Apache version 2.4.43 (vulnerable)</h3>
-<p>Current version. Website is vulnerable to exploits: Cross-site scripting and SQL injection.</p>
-<p>:globe_with_meridians: <a href="http://apache2.willilazarov.cz/">Live demo</a></p>
-<ul>
-<li>Username - <strong>admin</strong></li>
-<li>Password - <strong>password</strong></li>
-</ul>
-
 <h3>Apache version 2.4.43 (secure)</h3>
 <p>Current version. Website is protected against exploits: Cross-site scripting, SQL injection and directory traversal.</p>
 <p>:globe_with_meridians: <a href="https://apache3.willilazarov.cz/">Live demo</a> (SSL/TLS)</p>
